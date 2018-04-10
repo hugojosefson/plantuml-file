@@ -1,9 +1,14 @@
 #!/bin/bash
+## Source: https://github.com/hugojosefson/plantuml-file
 
 set -e
 
 if [ $# -ne 1 ]; then
+  echo
+  echo "Creates an svg file from the supplied plantuml source file."
+  echo
   echo "Usage: $0 <sourcefile.plantuml>"
+  echo
   exit 1
 fi
 
