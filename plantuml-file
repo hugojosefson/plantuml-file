@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+FULLFILE=$1
+FILENAME=$(basename -- "$FULLFILE")
+EXTENSION="${FILENAME##*.}"
+FILENAME="${FILENAME%.*}"
+
+cat $FULLFILE | docker run --rm -i think/plantuml > $FILENAME.svg
