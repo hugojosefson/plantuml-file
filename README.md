@@ -10,10 +10,10 @@ Uses docker image [think/plantuml](https://hub.docker.com/r/think/plantuml/).
 
 ## Usage examples
 
-Convert `examples/bob-hello-alice.plantuml` to `examples/bob-hello-alice.svg`:
+Convert `examples/alice-hello-bob.plantuml` to `examples/alice-hello-bob.svg`:
 
 ```bash
-./plantuml-file examples/bob-hello-alice.plantuml           
+./plantuml-file examples/alice-hello-bob.plantuml           
 ```
 
 Convert `examples/*.plantuml` to `examples/*.svg`:
