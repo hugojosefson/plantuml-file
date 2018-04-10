@@ -8,20 +8,24 @@ Uses docker image [think/plantuml](https://hub.docker.com/r/think/plantuml/).
 
  * Docker
 
-## Usage examples
+## Usage
 
-Convert `examples/alice-hello-bob.plantuml` to `examples/alice-hello-bob.svg`:
+```bash
+./plantuml-file <filename.plantuml>
+```
+
+Creates and writes to the same filename, but with an `.svg` extension.
+
+### Usage examples
+
+Create `examples/alice-hello-bob.svg`:
 
 ```bash
 ./plantuml-file examples/alice-hello-bob.plantuml           
 ```
 
-Convert `examples/*.plantuml` to `examples/*.svg`:
+Create `examples/*.svg`:
 
 ```bash
 find examples -name \*.plantuml -exec ./plantuml-file {} \; 
 ```
-
-## TODO
-
- * Require correct number of argument(s)
