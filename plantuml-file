@@ -2,9 +2,7 @@
 
 set -e
 
-FULLFILE=$1
-FILENAME=$(basename -- "$FULLFILE")
-EXTENSION="${FILENAME##*.}"
-FILENAME="${FILENAME%.*}"
+IN=$1
+OUT="${IN%.*}".svg
 
-cat $FULLFILE | docker run --rm -i think/plantuml > $FILENAME.svg
+cat $IN | docker run --rm -i think/plantuml > $OUT
