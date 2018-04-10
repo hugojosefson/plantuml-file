@@ -29,3 +29,16 @@ Create `examples/*.svg`:
 ```bash
 find examples -name \*.plantuml -exec ./plantuml-file {} \; 
 ```
+
+## Alternative oneliner
+
+If you don't even want to download this executable, you can simply use the docker
+image [think/plantuml](https://hub.docker.com/r/think/plantuml/) directly with a
+oneliner like this:
+
+```bash
+find \
+  examples/ \
+  -name \*.plantuml \
+  -exec bash -c 'IN={}; OUT=${IN%.*}.svg; (cat $IN | docker run --rm -i think/plantuml > $OUT)' \;
+```
